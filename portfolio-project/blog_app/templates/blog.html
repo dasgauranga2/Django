@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Blog</title>
+    </head>
+    <body>
+
+        <h1>Hello Blog</h1>
+        {% for article in articles %}
+        <!-- we send the id/primary-key of the article to the url path -->
+        <a href="{% url 'detail' article.id %}"><h2>{{ article.title }}</h2></a>
+        {% endfor %}
+        
+    </body>
+</html>
