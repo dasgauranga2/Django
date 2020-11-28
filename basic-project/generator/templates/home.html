@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+
+        <h2>PASSWORD</h2>
+        <!-- to link the form to an url path we use the 'name' argument of the url path -->
+        <form action="{% url 'password' %}">
+            <!-- the 'name' attribute is used to identify the form -->
+            <!-- when we request the user input from the form -->
+            <input type="text" name="input_password" id="">
+            <input type="submit" value="GENERATE PASSWORD">
+        </form>
+        
+    </body>
+</html>
