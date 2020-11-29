@@ -1,0 +1,15 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h2>CURRENT TODO TASKS</h2>
+
+    <!-- display all the todo tasks of the current user in a list -->
+    <ul>
+        {% for todo in todos %}
+        <li>{{ todo.title }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

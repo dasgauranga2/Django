@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Todo Tasks</title>
+    </head>
+    <body>
+
+        <!-- check if an user is logged in -->
+        <!-- if an user is logged in then display it's username -->
+        {% if user.is_authenticated %}
+            <h2>Logged in as {{ user.username }}</h2>
+            <form action="{% url 'user_logout' %}" method="POST">
+                {% csrf_token %} 
+                <button type="submit">LOGOUT</button>
+            </form>
+        {% else %}
+            <a href="{% url 'user_signup' %}">SIGNUP</a>
+            <a href="{% url 'user_login' %}">LOGIN</a>
+        {% endif %}
+        
+        {% block content %}
+
+        {% endblock %}
+        
+    </body>
+</html>
