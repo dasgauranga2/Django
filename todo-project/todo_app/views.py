@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
 from django.contrib.auth.models import User
 from django.db import IntegrityError
@@ -36,6 +36,44 @@ def user_signup(request):
             # IntegrityError occurs when the user tries to save the 'User' object
             # if the username already exists in the database
             return render(request, 'user_signup.html', {'form' : UserCreationForm(), 'error' : 'Username already taken'})
+
+def view_todo(request, todo_pk):
+
+    # retrieve only the 'Todo' object from the database
+    # where the primary key of the row matches with the 'todo_pk'
+    todo = get_object_or_404(Todo, pk=todo_pk, user=request.user)
+
+    if request.method == 'GET':
+        # when the user wants to view each todo task
+
+        # create a 'Todo' form for the 'Todo' model
+        # fill the form with existing data
+        form = TodoForm(instance=todo)
+
+        return render(request, 'view_todo.html', {'todo' : todo, 'form' : form})
+    else:
+        # when the user wants to make changes to each todo task by submitting the form
+
+        # retrieve the data submitted by the user
+        form = TodoForm(request.POST, instance=todo)
+
+        # save the data to the database
+        form.save()
+
+        return redirect('current_todo')
+
+def delete_todo(request, todo_pk):
+
+    # retrieve only the 'Todo' object from the database
+    # where the primary key of the row matches with the 'todo_pk'
+    todo = get_object_or_404(Todo, pk=todo_pk, user=request.user)
+
+    if request.method == 'POST':
+
+        # delete the 'Todo' object from the database
+        todo.delete()
+
+        return redirect('current_todo')
 
 def current_todo(request):
 

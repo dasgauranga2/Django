@@ -31,4 +31,8 @@ urlpatterns = [
     path('create/', views.create_todo, name='create_todo'),
     # url path for displaying the current todo tasks
     path('current/', views.current_todo, name='current_todo'),
+    # url path for displaying each todo task
+    path('<int:todo_pk>/', views.view_todo, name='view_todo'),
+    # url path for deleting each todo task
+    path('<int:todo_pk>/delete/', views.delete_todo, name='delete_todo'),
 ]

@@ -1,0 +1,23 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h2>{{ todo.title }}</h2>
+    <p>{{ todo.memo }}</p>
+    <br><br>
+
+    <!-- form for making changes to the todo task -->
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">SAVE</button>
+    </form>
+
+    <!-- form for deleteing the todo task -->
+    <form method="POST" action="{% url 'delete_todo' todo.id %}">
+        {% csrf_token %}
+        <button type="submit">DELETE</button>
+    </form>
+
+{% endblock %}
