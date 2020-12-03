@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+    <!-- displaying a single book detail -->
+    <h3>{{ object.title }}</h3>
+    <p>Author : {{ object.author }}</p>
+    <p>Price : {{ object.price }}</p>
+
+    <!-- displaying the reveiws for each book -->
+    <h3>Reviews</h3>
+    <ul>
+        {% for review in object.reviews.all %}
+        <li>{{ review.review }} - {{ review.author }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock content %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+    <!-- displaying the list of all books -->
+    {% for book in object_list %}
+        <!-- the method will return a representative URL for each book -->
+        <h3><a href="{{ book.get_absolute_url }}">{{ book.title }}</a></h3>
+    {% endfor %}
+
+{% endblock content %}
