@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <h2>LOGIN PAGE</h2>
+
+    <!-- form for user login -->
+    <form method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <!-- after submitting the form we will be -->
+        <!-- redirected to 'LOGIN_REDIRECT_URL' in the 'settings.py' file -->
+        <button class="btn btn-success" type="submit">LOGIN</button>
+    </form>
+    
+{% endblock content %}

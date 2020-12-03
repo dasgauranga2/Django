@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <h1>HOME PAGE</h1>
+    <img src="{% static 'images/ai.jpg' %}" height="225" width="400">
+
+    <!-- check if the user is authenticated -->
+    {% if user.is_authenticated %}
+        <h2>Hello {{ user.username }}</h2>
+        <!-- logout button -->
+        <a href="{% url 'logout' %}">LOGOUT</a>
+    {% else %}
+        <h2>You are not logged in</h2>
+        <!-- login button -->
+        <a href="{% url 'login' %}">LOGIN</a>
+        <!-- signup button -->
+        <a href="{% url 'signup' %}">SIGNUP</a>
+    {% endif %}
+{% endblock content %}
