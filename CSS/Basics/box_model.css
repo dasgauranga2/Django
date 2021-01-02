@@ -1,0 +1,19 @@
+
+/* by default all elements have some margin and padding */
+/* we set the margin and padding of all elements to zero */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    background-color: blanchedalmond;
+    border: 2px black solid;
+    /* set width of the 'div' element */
+    width: 500px;
+    /* set padding on all sides */
+    padding: 15px;
+    /* set margin on all sides */
+    margin: 25px;
+}

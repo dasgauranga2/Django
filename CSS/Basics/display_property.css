@@ -1,0 +1,13 @@
+
+li {
+    /* displays elements without any new line break */
+    /* all elements will appear in a single line */
+    display: inline;
+}
+
+img {
+    /* to set margin equal to 'auto' we have to make */
+    /* the element a block level element */
+    display: block;
+    margin: auto;
+}

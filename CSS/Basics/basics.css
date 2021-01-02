@@ -1,0 +1,18 @@
+
+/* selecting elements using their class */
+/* select the element with class 'top-heading' */
+.top-heading {
+  color: green;
+}
+
+/* selecting elements using their id */
+/* select the element with id 'welcome' */
+#welcome {
+    background-color: blue;
+}
+
+/* nested selector */
+/* inside the 'welcome' id element select the 'p' element */
+#welcome p {
+    font-size: 20px;
+}

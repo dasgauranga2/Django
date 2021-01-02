@@ -1,0 +1,42 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    /* max-width property defines the maximum width of an element */
+    /* for responsive design */
+    max-width: 800px;
+    /* if margin is set to 'auto' same amount of margin is applied on both sides */
+    /* the element will be centred */
+    margin: auto;
+}
+
+.box {
+    background-color: blanchedalmond;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.box p {
+    /* alignment of text */
+    text-align: center;
+}
+
+/* 'box-2' will appear on the left hand side and occupy 50% of the width of parent element */
+/* 'box-3' will appear on the right hand side and occupy 30% of the width of parent element */
+/* both of them will appear side by side */
+#box-2 {
+    width: 50%;
+    float: left;
+}
+
+#box-3 {
+    width: 30%;
+    float: right;
+}
+

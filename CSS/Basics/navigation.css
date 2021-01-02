@@ -1,0 +1,35 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #4c6ca0;
+    overflow: auto;
+}
+
+/* .navbar li {
+    float: left;
+} */
+
+.left {
+    /* moves all the selected elements to the left of the parent element */
+    /* they will all appear side by side */
+    float: left;
+}
+
+.right {
+    /* moves all the selected elements to the right of the parent element */
+    /* they will all appear side by side */
+    float: right;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+}
