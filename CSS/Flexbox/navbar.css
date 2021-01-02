@@ -1,0 +1,40 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* 'flex-direction' property specifies the direction of the flex items */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to right, rgb(102, 125, 182), rgb(0, 130, 200), rgb(0, 130, 200), rgb(102, 125, 182));
+    height: 80px;
+    align-items: center;
+}
+
+.item {
+    color: white;
+}
+
+.links ul {
+    list-style: none;
+}
+
+.title h2 {
+    font-size: 3em;
+    letter-spacing: 5px;
+}
+
+.links ul li {
+    float: left;
+    margin-right: 1rem;
+    font-size: 1.2em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
