@@ -1,0 +1,21 @@
+
+.grid {
+    display: grid;
+    /* specify the number of columns and the width of each column */
+    /* grid-template-columns: 150px 150px 150px; */
+    /* setting the width of one of the columns to 'auto' stretches the column 
+    to fit the entire browser window */
+    /* grid-template-columns: 150px 150px auto; */
+    /* 'repeat' will repeat the width entered in the second argument
+    the number of times to be repeated is given in the first argument */
+    /* grid-template-columns: repeat(3,250px); */
+    /* 'fr' units will stretch the grid to fill the entire browser width 
+    'fr' units specify the relative width of each column
+    the column with '2fr' units will have twice the width of the column with '1fr' units */
+    grid-template-columns: 1fr 2fr 3fr;
+}
+
+.item {
+    border: 2px solid black;
+    font-size: 2em;
+}

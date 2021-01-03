@@ -1,0 +1,22 @@
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.item {
+    border: 2px solid black;
+    font-size: 2em;
+}
+
+/* span one grid item over multiple rows or/and columns */
+.item-1 {
+    /* specify the column number where the grid item should start */
+    grid-column-start: 1;
+    /* specify the column number where the grid item should end */
+    grid-column-end: 4;
+    /* specify the row number where the grid item should start */
+    grid-row-start: 1;
+    /* specify the row number where the grid item should end */
+    grid-row-end: 3;
+}

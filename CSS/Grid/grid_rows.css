@@ -1,0 +1,15 @@
+
+.grid {
+    display: grid;
+    /* specify the height of rows */
+    grid-template-rows: 1fr 2fr 4fr;
+    /* the above property only specifies the height for the first three rows
+    because three heights have been specified
+    'grid-auto-rows' specifies the height of the other rows */
+    grid-auto-rows: 2fr;
+}
+
+.item {
+    border: 2px solid black;
+    font-size: 2em;
+}
