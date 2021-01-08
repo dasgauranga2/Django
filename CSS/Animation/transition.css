@@ -1,0 +1,25 @@
+
+body {
+    background-color: rgb(32, 32, 32);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    background: white;
+    width: 100px;
+    height: 100px;
+    /* transition changes the css property values smoothly over a given duration */
+    /* the transition will start when the css properties change */
+    /* below we specify the css properties for which the transition will occur */
+    transition-property: background,border-radius;
+    /* duration of the transition */
+    transition-duration: 2s;
+}
+
+/* when we hover over the element the css properties will smoothly change */
+.box:hover {
+    background: red;
+    border-radius: 20%;
+}

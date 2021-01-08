@@ -1,0 +1,36 @@
+
+body {
+    background-color: rgb(32, 32, 32);
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background: white;
+    /* specify the name of the keyframe animation */
+    animation-name: animate1;
+    /* duration of the animation */
+    animation-duration: 8s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+/* we can specify different percentages other 0% and 100%
+each percentage specifies the animation duration */
+@keyframes animate1 {
+    25% {
+        margin-left: 200px;
+    }
+    50% {
+        margin-top: 100px;
+        margin-left: 200px;
+    }
+    75% {
+        margin-top: 100px;
+        margin-left: 0px;
+    }
+    100% {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+}

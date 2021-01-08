@@ -1,0 +1,32 @@
+
+body {
+    background-color: rgb(32, 32, 32);
+}
+
+.box {
+    height: 200px;
+    /* specify the name of the keyframe animation */
+    animation-name: animate1;
+    /* duration of the animation */
+    animation-duration: 2s;
+    /* number of times the animation should be played */
+    animation-iteration-count: 3;
+    animation-fill-mode: forwards;
+}
+
+/* the keyframe specifies the animation code
+during the animation the css properties of the elements are changed
+specify when the style change will happen in percentage
+0% is the beginning of the animation and 100% is when the animation is complete */
+@keyframes animate1 {
+    /* the css properties of the element in the beginning */
+    0% {
+        width: 200px;
+        background: white;
+    }
+    /* the css properties of the element when the animation is complete */
+    100% {
+        width : 600px;
+        background: red;
+    }
+}
